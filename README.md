@@ -1,15 +1,36 @@
-# WP S3 Upload
+# WP S3 Upload 🚀
 
-WP S3 Upload adalah plugin WordPress yang memungkinkan Anda mengunggah gambar ke Amazon S3 secara otomatis saat mengunggah media ke WordPress.
+![WP S3 Upload](https://raw.githubusercontent.com/revandy/wp-upload-to-s3/refs/heads/main/plugin.JPG)
 
-## 📌 Fitur
-✅ Mengunggah file gambar ke **Amazon S3** secara otomatis  
-✅ **Kompatibel dengan WooCommerce** (gambar produk diunggah ke S3)  
-✅ Menggunakan **struktur direktori berdasarkan tanggal** (`uploads/YYYY/MM/DD/`)  
-✅ Mendukung berbagai ukuran thumbnail (150x150, 300x300, dll.)  
-✅ Menyimpan URL file langsung ke metadata WordPress  
-✅ Menghapus file dari S3 saat media dihapus dari WordPress  
-✅ Mendukung pengaturan **Bucket, Access Key, Secret Key, dan Region**  
+**WP S3 Upload** adalah plugin WordPress yang secara otomatis mengunggah gambar ke **Amazon S3** saat media diunggah ke WordPress.  
+Plugin ini **kompatibel dengan WooCommerce**, mendukung berbagai ukuran gambar, dan memastikan media tidak tersimpan di server lokal.
+
+## 📌 Fitur Utama
+✅ **Otomatis unggah gambar ke Amazon S3**  
+✅ **Kompatibel dengan WooCommerce (gambar produk dan galeri)**  
+✅ **Struktur direktori berdasarkan tanggal** (`uploads/YYYY/MM/DD/`)  
+✅ **Menggunakan URL S3 untuk semua media (bukan URL lokal)**  
+✅ **Otomatis menghapus file dari S3 saat dihapus dari WordPress**  
+✅ **Dukungan pengaturan Bucket, Access Key, Secret Key, dan Region**  
+
+---
+
+## 🛒 Kompatibilitas dengan WooCommerce
+
+![WooCommerce Compatibility](https://raw.githubusercontent.com/revandy/wp-upload-to-s3/refs/heads/main/woocommerce.png)
+
+WP S3 Upload kompatibel dengan **WooCommerce**, dan akan bekerja dengan:
+- **Gambar utama produk** (`Product Image`).
+- **Gambar galeri produk** (`Product Gallery`).
+- **Gambar kategori WooCommerce**.
+- **Gambar thumbnail yang digunakan di halaman produk dan katalog**.
+
+### **Cara Menggunakan dengan WooCommerce**
+1. **Upload gambar produk seperti biasa di WooCommerce.**
+2. **Plugin akan otomatis mengunggah gambar ke S3 dan menyimpan URL di metadata.**
+3. **WooCommerce akan menggunakan URL gambar dari S3 untuk menampilkan produk di toko.**
+
+✅ **Semua gambar produk akan diambil langsung dari S3, bukan dari server lokal.**  
 
 ---
 
