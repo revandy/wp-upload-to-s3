@@ -170,13 +170,14 @@ function replace_media_with_s3_url($url, $post_id) {
 add_filter('wp_get_attachment_url', 'replace_media_with_s3_url', 10, 2);
 // Pastikan WordPress menggunakan URL S3 untuk thumbnail
 function wp_s3_replace_thumbnail_urls($data, $attachment_id) {
+    $bucket = get_option('wp_s3_upload_bucket');
     $region = get_option('wp_s3_upload_region');
     if (!empty($data['sizes'])) {
         foreach ($data['sizes'] as $size => $info) {
             $s3_url = get_post_meta($attachment_id, '_s3_thumb_' . $size, true);
             if (!empty($s3_url)) {
                 // Paksa WordPress mengganti URL thumbnail dengan path di S3
-                $data['sizes'][$size]['url'] = "https://japanwholesaleid.s3.$region.amazonaws.com/" . $s3_url;
+                $data['sizes'][$size]['url'] = "https://$bucket.s3.$region.amazonaws.com/" . $s3_url;
             }
         }
     }
